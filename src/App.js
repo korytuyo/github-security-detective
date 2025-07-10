@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
-import Game from './components/Game'; // Ensure Game is in components folder
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Game from './components/Game';
 
-const App = () => {
+function App() {
   const [gameStarted, setGameStarted] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(true);
+
+  const startGame = () => {
+    setGameStarted(true);
+  };
 
   return (
     <div className="App">
       {!gameStarted ? (
-        <header className="App-header">
-          <h1>GitHub Security Detective</h1>
-          <p>Test your GitHub Advanced Security knowledge!</p>
-          <button className="start-button" onClick={() => setGameStarted(true)}>
-            Start Game
-          </button>
-        </header>
+        <div className="start-screen">
+          <div className="start-content">
+            <h1 className="start-title">GITHUB ADVANCED SECURITY</h1>
+            <h2 className="subtitle">JEOPARDY!</h2>
+            <button className="control-btn" onClick={startGame}>
+              START GAME
+            </button>
+          </div>
+        </div>
       ) : (
-        <Game />
+        <Game soundEnabled={soundEnabled} setSoundEnabled={setSoundEnabled} />
       )}
     </div>
   );
-};
+}
 
 export default App;

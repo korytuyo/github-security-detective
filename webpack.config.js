@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -15,10 +14,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env']
-          }
+          loader: 'babel-loader'
         }
       },
       {
@@ -29,8 +25,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'index.html'
+      template: './public/index.html'
     })
   ],
   devServer: {
@@ -39,7 +34,6 @@ module.exports = {
     },
     compress: true,
     port: 3000,
-    open: true,
     hot: true
   },
   resolve: {

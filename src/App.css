@@ -1,55 +1,61 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-  background-color: #010409;
-  color: #c9d1d9;
-  line-height: 1.6;
-}
-
 .App {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+.start-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #001e4d 0%, #003d99 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
 }
 
-.App-header {
+.start-content {
   text-align: center;
-  padding: 2rem;
 }
 
-.App-header h1 {
-  font-size: 3.5rem;
-  color: #58a6ff;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
+.start-title {
+  font-size: 4em;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); opacity: 1; }
+  50% { filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.8)); opacity: 0.85; }
+}
 }
 
-.App-header p {
-  font-size: 1.5rem;
-  color: #8b949e;
-  margin-bottom: 2rem;
+.subtitle {
+  font-size: 1.5em;
+  color: #aaa;
+  margin-bottom: 40px;
 }
 
-.start-button {
-  background: #238636;
-  color: white;
+.control-btn {
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #001e4d;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 6px;
-  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px 0 rgba(35, 134, 54, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
-.start-button:hover {
-  background: #2ea043;
+.control-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(35, 134, 54, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
 }
