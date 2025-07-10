@@ -38,6 +38,17 @@
   color: #d29922;
 }
 
+.category-badge {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #1f6feb;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .question-section {
   background: #0d1117;
   padding: 2rem;
