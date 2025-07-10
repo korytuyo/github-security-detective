@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Game from './Game';
+import Game from './components/Game'; // Ensure Game is in components folder
 import './App.css';
 
 const App = () => {
