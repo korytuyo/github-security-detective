@@ -1,0 +1,22 @@
+# GitHub Security Jeopardy - Code Owners
+# This file defines who owns and should review changes to specific parts of the repository
+
+# Global ownership - all files require review from the repository owner
+* @korytuyo
+
+# Frontend components and game logic
+/src/ @korytuyo
+
+# Configuration files
+/webpack.config.js @korytuyo
+/staticwebapp.config.json @korytuyo
+/package.json @korytuyo
+
+# Documentation
+/README.md @korytuyo
+
+# GitHub workflows and security configurations
+/.github/ @korytuyo
+
+# Game data and questions - require extra review for accuracy
+/src/data/ @korytuyo
