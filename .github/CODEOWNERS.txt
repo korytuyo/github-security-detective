@@ -1,7 +1,7 @@
 # GitHub Security Jeopardy - Code Owners
-# This file defines who owns and should review changes to specific parts of the repository
+# This file defines who owns and should review changes to specific parts of the repository!
 
-# Global ownership - all files require review from the repository owner
+# Global ownership - all files require review from the repository owner!
 * @korytuyo
 
 # Frontend components and game logic
